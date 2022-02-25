@@ -18,20 +18,29 @@ public class ptbac2 {
                 System.out.println("Khong hop le,Nhap lai a,b,c ");
             }
         }while(!wenttocatch);
-        float delta = (b*b) - (4*a*c);
-        if(delta<0){
-            System.out.print("Vo nghiem");
-        }
-        else if(delta==0){
-            System.out.print("Nghiem x1= " + (-b/2*a));
+        if(a==0 && b==0){
+            if(c==0){
+                System.out.print("vo so nghiem");               
+            }
+            else{
+                System.out.print("vo nghiem");
+            }           
         }
         else{
-            float x1 = (float) (-b+Math.sqrt(delta))/(2*a);
-            float x2 = (float) (-b-Math.sqrt(delta))/(2*a);
-            System.out.print("X1= " + x1 );
-            System.out.print("X2= " + x2 );
+            float delta = (b*b) - (4*a*c);
+            if(delta<0){
+                System.out.print("Vo nghiem");
+            }
+            else if(delta==0){
+                System.out.print("Nghiem x1= " + (-b/2*a));
+            }
+            else{
+                float x1 = (float) (-b+Math.sqrt(delta))/(2*a);
+                float x2 = (float) (-b-Math.sqrt(delta))/(2*a);
+                System.out.println("X1= " + x1 );
+                System.out.println("X2= " + x2 );
+            }
         }
-
     } 
     
 }
